@@ -4,6 +4,10 @@ import { UsersService } from "../users/users.service";
 @Injectable()
 export class AuthService {
   constructor(
-    private usersService: UsersService
+    // private usersService: UsersService
   ) {}
+
+  login(user){}
+
+  signup(user){}
 }

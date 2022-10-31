@@ -10,6 +10,9 @@ export class Price {
   @Column()
   price: string;
 
+  @Column()
+  link: string;
+
   @ManyToOne(() => Product, (product) => product.prices)
   product: Product;
 

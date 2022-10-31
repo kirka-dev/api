@@ -27,6 +27,10 @@ export class PricesService {
   }
 
   async findAll(): Promise<Price[]> {
-    return await this.pricesRepository.find();
+    return await this.pricesRepository.find({
+      relations: {
+        store: true
+      },
+    });
   }
 }

@@ -28,7 +28,7 @@ export class ProductsService {
 
   async findAll(): Promise<Product[]> {
     return await this.productsRepository.find({
-      relations: ['prices'],
+      relations: ['brand', 'prices'],
     });
   }
 }

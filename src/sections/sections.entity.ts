@@ -12,8 +12,6 @@ export class Section {
   @Column()
   displayName: string;
 
-  @OneToMany(() => Category, (category) => category.parent, {
-    cascade: true,
-  })
+  @OneToMany(() => Category, (category) => category.parent)
   childs: Category[];
 }
